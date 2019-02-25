@@ -3,24 +3,16 @@ import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 
 class Job extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            job: {}
-        }
-    }
-
+    
     async componentDidMount() {
         let response = await axios.get(`/api/jobs/${this.props.match.params.job}`)
         console.log(response);
-        this.setState({
-            job: response.data
-        })
     }
+
     render() {
         return (
             <div>
-                {this.state.job.title}
+                individual job
             </div>
         )
     }

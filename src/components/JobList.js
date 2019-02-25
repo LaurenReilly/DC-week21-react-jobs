@@ -19,7 +19,6 @@ class JobList extends Component {
  
     render() {
         let jobs = this.state.jobs;
-        console.log(jobs)
         return <div>
                 {
                     jobs.map((job, i) =>(
