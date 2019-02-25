@@ -23,7 +23,7 @@ class JobList extends Component {
                 {
                     jobs.map((job, i) =>(
                         <div key={i}>
-                            <Link to={`/${job.id}`}>{job.title}</Link>
+                            <Link to={`/jobs/${job.id}`}>{job.title}</Link>
                         </div>
                     ))
                 }
