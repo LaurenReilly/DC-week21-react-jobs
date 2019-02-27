@@ -23,7 +23,9 @@ class JobList extends Component {
                 {
                     jobs.map((job, i) =>(
                         <div key={i}>
+                            <h2>{job.company}</h2>
                             <Link to={`/jobs/${job.id}`}>{job.title}</Link>
+                            <p>{job.type}<br/>{job.created_at}</p>
                         </div>
                     ))
                 }
